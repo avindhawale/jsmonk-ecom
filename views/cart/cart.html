@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../cart/cart.css">
+    <title>JSMonk ecommerce website - Cart</title>
+    <script src="../../js/index.js" defer></script>
+    <script src="../cart/cart.js" defer></script>
+</head>
+
+<body>
+    <div id="main-container" class="main-container theme-light">
+        <!-- Header  -->
+        <div class="header mb-5 box-shadow-medium">
+            <div class="header-logo-wrapper px-5 py-2">
+                <div class="logo">
+                    <span class="logo-title">jsmonk ecomm</span>
+                    <span class="logo-subtitle">Best ecommerce website</span>
+                </div>
+            </div>
+            <div class="header-menu-wrapper">
+                <div class="center-menus"></div>
+                <div class="right-menus">
+                    <a class="menu-icon" href="../home/home.html"><i class="bi bi-house-door"></i>Home</a>
+                    <div class="menu-icon" onclick="toggleTheme()"><i class="bi bi-gear"></i></i>Theme</div>
+                    <div class="badge-count-wrapper">
+                        <a class="menu-icon" href="../wishlist/wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge busy red">5</span>
+                            Wishlist
+                        </a>
+                    </div>
+                    <div class="badge-count-wrapper">
+                        <a class="menu-icon" href="#">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge busy red">5</span>
+                            Cart
+                        </a>
+                    </div>
+                <a class="menu-icon" href="../auth/login/login.html"><i class="bi bi-door-open"></i></i>Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <section class="content">
+                <div class="content-body m-2 px-5 box-shadow-medium">
+                    <div class="content-body-title border-bottom px-5 py-2 mb-5 border-color">
+                        <h2>Shopping Cart</h2>
+                    </div>
+
+                    <div class="content-body m-2">
+                        <div class="category-wrapper my-5">
+
+                            <div class="list-cart">
+
+                                <div class="list-cart-item">
+                                    <img class="list-cart-item-img" src="../../assets/images/products/cloths.jpg" />
+                                    <div class="list-cart-item-details">
+                                        <span class="text-base">Quess Care Total Protection Plan for 1 Year Protection
+                                            for Mobile Between
+                                            40001 to 45000</span>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <div class="text-success">In stock</div>
+                                        <div class="soldBy">
+                                            Sold by : <span class="text-info">XYZ Company</span>
+                                        </div>
+                                        <div class="list-cart-item-quantity mt-4">
+                                            <button class="btn btn-warning">-</button>
+                                            <span>0</span>
+                                            <button class="btn btn-warning">+</button>
+                                        </div>
+                                    </div>
+                                    <h4 class="list-cart-item-price">
+                                        <span class="text-xs">₹</span>
+                                        <b>41500</b>
+                                    </h4>
+                                </div>
+
+                                <div class="list-cart-item">
+                                    <img class="list-cart-item-img" src="../../assets/images/products/cloths.jpg" />
+                                    <div class="list-cart-item-details">
+                                        <span class="text-base">Quess Care Total Protection Plan for 1 Year Protection
+                                            for Mobile Between
+                                            40001 to 45000</span>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <div class="text-success">In stock</div>
+                                        <div class="soldBy">
+                                            Sold by : <span class="text-info">XYZ Company</span>
+                                        </div>
+                                        <div class="list-cart-item-quantity mt-4">
+                                            <button class="btn btn-warning">-</button>
+                                            <span>0</span>
+                                            <button class="btn btn-warning">+</button>
+                                        </div>
+                                    </div>
+                                    <h4 class="list-cart-item-price">
+                                        <span class="text-xs">₹</span>
+                                        <b>41500</b>
+                                    </h4>
+                                </div>
+
+                                <div class="list-cart-item">
+                                    <img class="list-cart-item-img" src="../../assets/images/products/cloths.jpg" />
+                                    <div class="list-cart-item-details">
+                                        <span class="text-base">Quess Care Total Protection Plan for 1 Year Protection
+                                            for Mobile Between
+                                            40001 to 45000</span>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <div class="text-success">In stock</div>
+                                        <div class="soldBy">
+                                            Sold by : <span class="text-info">XYZ Company</span>
+                                        </div>
+                                        <div class="list-cart-item-quantity mt-4">
+                                            <button class="btn btn-warning">-</button>
+                                            <span>0</span>
+                                            <button class="btn btn-warning">+</button>
+                                        </div>
+                                    </div>
+                                    <h4 class="list-cart-item-price">
+                                        <span class="text-xs">₹</span>
+                                        <b>41500</b>
+                                    </h4>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- content end -->
+            <div class="sidebar filter-sidebar">
+                <div class="drawer-wrapper m-2 box-shadow-medium">
+                    <div class="drawer-head border-bottom border-color p-5">
+                        <div class="drawer-head-title filter-drawer-head-title">
+                            <span>Total</span>
+                        </div>
+                    </div>
+                    <ul class="drawer-list px-5 py-2">
+                        <li class="drawer-item drawer-item-heading">
+                            Subtotal (3 items)
+                        </li>
+                        <li class="drawer-item">
+                            <label>Jacket 1 - ₹41500</label>
+                        </li>
+                        <li class="drawer-item">
+                            <label>Jacket 2 - ₹41500</label>
+                        </li>
+                        <li class="drawer-item">
+                            <label>Jacket 3 - ₹41500</label>
+                        </li>
+                    </ul>
+                    <ul class="drawer-list px-5 py-2">
+                        <li class="drawer-item drawer-item-heading">
+                            Total - ₹124500
+                        </li>
+                    </ul>
+                    <div class="checkout-wrapper m-5 pb-5">
+                        <button class="btn btn-warning btn-round">Proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

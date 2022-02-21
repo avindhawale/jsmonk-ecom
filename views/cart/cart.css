@@ -1,0 +1,97 @@
+/* local variables */
+:root {
+  /* card */
+  --card-width: 300px;
+  --item-img-size: 180px;
+  --list-quantity-width: 110px;
+}
+
+.badge-count-wrapper .menu-icon .badge {
+  height: 1.25rem;
+  width: 1.25rem;
+  padding: 0;
+  text-align: center;
+  right: 2rem;
+  top: 1rem;
+}
+
+.category-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card.card-product {
+  flex-basis: var(--card-width);
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+.product-wrapper {
+  padding: 1rem;
+}
+
+.sidebar.filter-sidebar .filter-drawer-head-title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+}
+.filter-clear {
+  cursor: pointer;
+}
+.drawer-wrapper .drawer-list .drawer-item {
+  font-family: "Poppins-Regular";
+}
+
+.list-cart {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: var(--width-full);
+}
+.list-cart .list-cart-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-family: "Poppins-Regular";
+  border: 1px solid var(--secondary);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.825rem;
+}
+.list-cart .list-cart-item .list-cart-item-img {
+  width: var(--item-img-size);
+  height: var(--item-img-size);
+}
+.list-cart .list-cart-item .list-cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+  flex-basis: 70%;
+}
+.list-cart .list-cart-item .list-cart-item-price {
+  text-align: right;
+}
+.list-cart-item-quantity {
+  width: var(--list-quantity-width);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-cart-item-quantity .btn {
+  padding: 0.3rem 0.8rem;
+  min-width: auto;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.checkout-wrapper .btn {
+  background: var(--warning);
+  color: var(--white);
+}
+
+.theme-light .list-cart .list-cart-item {
+  background: var(--white);
+}
