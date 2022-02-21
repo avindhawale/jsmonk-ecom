@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../products/products.css">
+    <title>JSMonk ecommerce website - Products</title>
+    <script src="../../js/index.js"></script>
+</head>
+
+<body>
+    <div id="main-container" class="main-container theme-light">
+        <!-- Header  -->
+        <div class="header mb-5 box-shadow-medium">
+            <div class="header-logo-wrapper px-5 py-2">
+                <div class="logo">
+                    <span class="logo-title">jsmonk ecomm</span>
+                    <span class="logo-subtitle">Best ecommerce website</span>
+                </div>
+            </div>
+            <div class="header-menu-wrapper">
+                <div class="center-menus"></div>
+                <div class="right-menus">
+                    <div class="menu-icon" onclick="toggleTheme()"><i class="bi bi-gear"></i></i>Theme</div>
+                    <div class="badge-count-wrapper">
+                        <a class="menu-icon" target="blank" href="../wishlist/wishlist.html">
+                            <i class="bi bi-heart"></i>
+                            <span class="badge busy red">5</span>
+                            Wishlist
+                        </a>
+                    </div>
+                    <div class="badge-count-wrapper">
+                        <a class="menu-icon" target="blank" href="../cart/cart.html">
+                            <i class="bi bi-cart3"></i>
+                            <span class="badge busy red">5</span>
+                            Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="sidebar filter-sidebar">
+                <div class="drawer-wrapper m-2 box-shadow-medium">
+                    <div class="drawer-head border-bottom border-color p-5">
+                        <div class="drawer-head-title filter-drawer-head-title">
+                            <span>Filters</span>
+                            <span class="filter-clear">Clear <i class="bi bi-x-circle"></i></span>
+                        </div>
+                    </div>
+                    <ul class="drawer-list px-5 py-2">
+                        <li class="drawer-item drawer-item-heading">
+                            Sorting
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="sorting" id="relevant">
+                            <label for="relevant">Relevant</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="sorting" id="price-lh">
+                            <label for="price-lh">Price : Low to High</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="sorting" id="price-hl">
+                            <label for="price-hl">Price : High to Low</label>
+                        </li>
+                    </ul>
+                    <ul class="drawer-list px-5 py-2">
+                        <li class="drawer-item drawer-item-heading">
+                            Rating
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="rating" id="five-star">
+                            <label for="five-star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="rating" id="four-star">
+                            <label for="four-star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="rating" id="three-star">
+                            <label for="three-star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="rating" id="two-star">
+                            <label for="two-star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="radio" name="rating" id="one-star">
+                            <label for="one-star">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="drawer-list px-5 py-2">
+                        <li class="drawer-item drawer-item-heading">
+                            Category
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="cloths">
+                            <label for="relevant">Cloths</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="furniture">
+                            <label for="price-lh">Furniture</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="headphones">
+                            <label for="relevant">Headphones</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="helmets">
+                            <label for="price-lh">Helmets</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="laptop">
+                            <label for="relevant">Laptops</label>
+                        </li>
+                        <li class="drawer-item">
+                            <input type="checkbox" name="category" id="mobiles">
+                            <label for="price-lh">Mobiles</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="content">
+                <div class="content-body m-2 px-5 box-shadow-medium">
+                    <div class="content-body-title border-bottom px-5 py-2 mb-5 border-color">
+                        <h2>Jackets</h2>
+                    </div>
+
+                    <div class="content-body m-2 px-5">
+                        <div class="category-wrapper my-5">
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-product">
+                                <div class="product-wrapper">
+                                    <div class="img-wrapper">
+                                        <img src="../../assets/images/products/cloths.jpg" />
+                                        <span class="card-badge">70% off</span>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4>Jackets</h4>
+                                        <div class="address text-xs"> 'The future of fashion will focus on customers and
+                                            providing an innovative experience' </div>
+                                        <span class="a-price">
+                                            <span aria-hidden="true">
+                                                <span class="a-price-symbol">₹</span>
+                                                <span class="a-price-whole">899</span>
+                                                <span class="old-price">
+                                                    ₹ 2999
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <div class="card-btn-container">
+                                            <button class="btn btn-primary">Add to cart</button>
+                                            <button class="btn btn-warning">Wishlist</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
