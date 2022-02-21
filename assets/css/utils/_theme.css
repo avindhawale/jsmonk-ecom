@@ -37,7 +37,7 @@
 }
 .theme-light .header {
   background: var(--bg-light-header);
-  z-index: 1;
+  z-index: 111111;
 }
 .theme-light .border-color {
   border-color: var(--bg-light-border-color);
