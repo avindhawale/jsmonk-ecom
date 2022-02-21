@@ -13,10 +13,18 @@ This is an ecommerce website created using [jsmonk-design](https://github.com/av
 * As this site is created using  [jsmonk-design](https://github.com/avindhawale/jsmonk-design) component library, it comes with three different color themes.
 
 ### Demo
-* Checkout the demo of JSMonk Ecom website [here](https://6213e80702b63572dbcafdbe--inspiring-jang-79ba74.netlify.app/)
+* Checkout the demo of JSMonk Ecom website [here](https://jsmonk-ecom.netlify.app/views/home/home.html)
 
 ### Screenshot
-![Button Component](https://user-images.githubusercontent.com/5699611/155021862-362603e8-1f1a-4543-be49-db3394a3c354.gif)
+![Homepage](https://user-images.githubusercontent.com/5699611/155027810-3e809346-32c6-450a-8a89-20cd5cea3274.PNG)
+
+![Product list](https://user-images.githubusercontent.com/5699611/155027842-446e80e9-384b-482a-8e7c-670205e66d97.PNG)
+
+![Cart](https://user-images.githubusercontent.com/5699611/155027894-d05a22d0-d7f3-41be-a2e4-ebacc3222e9c.PNG)
+
+![Wishlist](https://user-images.githubusercontent.com/5699611/155027925-100f4e6e-a372-4f4e-8dd6-e258b462a481.PNG)
+
+
 
 ## Authors
 
