@@ -1,0 +1,11 @@
+.page .auth-content {
+  width: 500px;
+  margin: 2rem auto;
+}
+.page .auth-content .content-body {
+  text-align: center;
+}
+.login-link {
+  padding: 0.875rem;
+  text-decoration: none;
+}
